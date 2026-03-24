@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Punjab Reads | Online Bookstore</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Base Styles & Font */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: whitesmoke; /* Using color name */
+            color: darkslategray; /* Using color name */
+        }
+
+        /* Header */
+        header {
+            background-color: white; /* Using color name */
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 10px lightgray; /* Using color name for shadow */
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 26px;
+            font-weight: 600;
+            color: tomato; /* Using color name */
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: dimgray; /* Using color name */
+            font-weight: 400;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: tomato; /* Using color name */
+        }
+
+        /* Rounded Cart Button */
+        .cart-btn {
+            background-color: tomato; /* Using color name */
+            color: white !important; /* Using color name */
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-weight: 600;
+            box-shadow: 0 4px 8px lightcoral; /* Using color name */
+            transition: all 0.3s;
+        }
+
+        .cart-btn:hover {
+            background-color: crimson; /* Using color name */
+            transform: translateY(-2px);
+        }
+
+        /* Hero Section */
+        .hero {
+            background-color: lightpink; /* Using color name */
+            color: black; /* Using color name */
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            color: darkslategray; /* Using color name */
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-btn {
+            background-color: darkslategray; /* Using color name */
+            color: white; /* Using color name */
+            border: none;
+            padding: 15px 35px;
+            font-size: 18px;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .cta-btn:hover {
+            background-color: tomato; /* Using color name */
+            transform: translateY(-3px);
+        }
+
+        /* Main Content & Book Grid */
+        main {
+            padding: 80px 8%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        main h2 {
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 32px;
+            color: black; /* Using color name */
+        }
+
+        .book-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            justify-content: center;
+        }
+
+        /* Beautiful Book Cards */
+        .book-card {
+            background-color: white; /* Using color name */
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px silver; /* Using color name */
+            text-align: center;
+            width: 260px;
+            transition: all 0.4s ease;
+        }
+
+        .book-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 25px darkgray; /* Using color name */
+        }
+
+        .book-card img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .book-card h3 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: black; /* Using color name */
+        }
+
+        .author {
+            font-size: 14px;
+            color: gray; /* Using color name */
+            margin-bottom: 15px;
+        }
+
+        .price {
+            font-size: 22px;
+            font-weight: 600;
+            color: forestgreen; /* Using color name */
+            margin-bottom: 20px;
+        }
+
+        .add-btn {
+            background-color: transparent;
+            color: tomato; /* Using color name */
+            border: 2px solid tomato; /* Using color name */
+            padding: 10px 20px;
+            width: 100%;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .add-btn:hover {
+            background-color: tomato; /* Using color name */
+            color: white; /* Using color name */
+        }
+
+        /* Footer */
+        footer {
+            background-color: darkslategray; /* Using color name */
+            color: lightgray; /* Using color name */
+            text-align: center;
+            padding: 30px;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">📚 Punjab Reads</div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Punjabi Sahit</a></li>
+                <li><a href="#">Bestsellers</a></li>
+                <li><a href="#" class="cart-btn">Cart (0)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Apni Pasand Ki Kitabein Padhein</h1>
+            <p>Punjabi literature aur best Indian authors ki kitabein best price par. Aaj hi order karein!</p>
+            <button class="cta-btn">Explore Books</button>
+        </div>
+    </section>
+
+    <main>
+        <h2>Trending Books</h2>
+        <div class="book-grid">
+            
+            <div class="book-card">
+                <img src="https://placehold.co/300x450/ffeaa7/2d3436?text=Chitta+Lahu" alt="Chitta Lahu">
+                <h3>Chitta Lahu</h3>
+                <p class="author">By Nanak Singh</p>
+                <p class="price">₹250</p>
+                <button class="add-btn">Add to Cart</button>
+            </div>
+
+            <div class="book-card">
+                <img src="https://placehold.co/300x450/fab1a0/2d3436?text=Pinjar" alt="Pinjar">
+                <h3>Pinjar</h3>
+                <p class="author">By Amrita Pritam</p>
+                <p class="price">₹199</p>
+                <button class="add-btn">Add to Cart</button>
+            </div>
+
+            <div class="book-card">
+                <img src="https://placehold.co/300x450/81ecec/2d3436?text=Train+to+Pak" alt="Train to Pakistan">
+                <h3>Train to Pakistan</h3>
+                <p class="author">By Khushwant Singh</p>
+                <p class="price">₹350</p>
+                <button class="add-btn">Add to Cart</button>
+            </div>
+
+            <div class="book-card">
+                <img src="https://placehold.co/300x450/a29bfe/2d3436?text=Marhi+Da+Deeva" alt="Marhi Da Deeva">
+                <h3>Marhi Da Deeva</h3>
+                <p class="author">By Gurdial Singh</p>
+                <p class="price">₹220</p>
+                <button class="add-btn">Add to Cart</button>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Punjab Reads. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
